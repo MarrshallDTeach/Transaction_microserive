@@ -42,7 +42,7 @@ public class TransactionController {
     }
 
 
-    @GetMapping("/transaction/source/{source}/dest/{dest}")
+    @GetMapping("/transactions/source/{source}/dest/{dest}")
     public List<Transaction> retrouveTransactionParSourceEtDest
             (@PathVariable String source, @PathVariable String dest) {
 
@@ -53,7 +53,7 @@ public class TransactionController {
         return transaction;
     }
 
-    @GetMapping("/transaction/date/{date}")
+    @GetMapping("/transactions/date/{date}")
     public List<Transaction> retrouveTransactionParDate
             (@PathVariable Date date) {
 
@@ -91,6 +91,14 @@ public class TransactionController {
         });
     }
 
+    @GetMapping("/transaction/montant/{montant}")
+    public List<Transaction> retrouveTransactionParMontant
+            (@PathVariable int montant) {
+
+        List<Transaction> transactions =
+                repository.findByMontant(montant);
 
 
+        return transactions;
+    }
 }
