@@ -15,5 +15,6 @@ public interface TransactionRepository extends  JpaRepository<Transaction, Long>
     //TauxChange findById(Long id);
     List<Transaction> findBySourceAndDest(String source, String dest);
     List<Transaction> findByDateCotation(Date date);
-    void addTransaction(Transaction transaction);
+    Transaction save(Transaction transaction);
+
 }

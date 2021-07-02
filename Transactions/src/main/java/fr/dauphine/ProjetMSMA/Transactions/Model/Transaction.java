@@ -60,6 +60,8 @@ public class Transaction {
         return montant;
     }
 
+    public void setMontant(int montant) { this.montant = montant;}
+
     public BigDecimal getTaux() {
         return taux;
     }

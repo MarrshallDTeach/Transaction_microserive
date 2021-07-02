@@ -6,4 +6,4 @@ values(10002,'EUR','JPY',1000,'2021-05-21',130);
 insert into Transaction (id_transaction,devise_src,devise_dest,montant,date_cotation,taux)
 values(10003,'USD','GBP',900,'2021-05-21',0.75);
 insert into Transaction (id_transaction,devise_src,devise_dest,montant,date_cotation,taux)
-values(10001,'EUR','USD',750,'2021-05-20',1.18);
+values(10004,'EUR','USD',750,'2021-05-20',1.18);
